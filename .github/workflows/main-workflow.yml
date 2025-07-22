@@ -1,0 +1,34 @@
+name: Build and Run
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+
+    - name: tshirts fail
+      if: always()
+      run: |
+        cd tshirts
+        java -ea tshirts.java
+
+    - name: misaligned fail
+      if: always()
+      run: |
+        cd misaligned
+        java -ea misaligned.java
+
+    - name: weather report fail
+      if: always()
+      run: |
+        cd weatherreport
+        java -ea weatherreport.java
