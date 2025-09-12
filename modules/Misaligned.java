@@ -1,13 +1,14 @@
 package modules;
 
-public class Misaligned {
-    public static int printColorMap() {
+public class Misaligned  {
+    public static int printColorMap(IColorCodePrinter printerRef) {
         String majorColors[] = {"White", "Red", "Black", "Yellow", "Violet"};
         String minorColors[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
         int i = 0, j = 0;
         for(i = 0; i < 5; i++) {
             for(j = 0; j < 5; j++) {
               String formatedColorCodeMapItem=formatColorPair(i * 5 + j, majorColors[i], minorColors[i]));
+                printerRef.print(formatedColorCodeMapItem);
             }
         }
         return i * j;
