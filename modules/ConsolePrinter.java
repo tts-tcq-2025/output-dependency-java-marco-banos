@@ -1,7 +1,7 @@
-public class ConolePrinter{
+public class ColoCodeConolePrinter{
 
-    public void print(int colorCode,String majorColor,String minorColor){
-
+    public void print(String colorCodeMapItem){
+         System.out.println(colorCodeMapItem);
     }
       
 }
