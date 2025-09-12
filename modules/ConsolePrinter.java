@@ -1,3 +1,4 @@
+package modules;
 public class ColoCodeConolePrinter{
 
     public void print(String colorCodeMapItem){
