@@ -7,7 +7,7 @@ public class Misaligned {
         int i = 0, j = 0;
         for(i = 0; i < 5; i++) {
             for(j = 0; j < 5; j++) {
-                System.out.println(formatColorPair(i * 5 + j, majorColors[i], minorColors[i]));
+              String formatedColorCodeMapItem=formatColorPair(i * 5 + j, majorColors[i], minorColors[i]));
             }
         }
         return i * j;
