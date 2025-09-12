@@ -1,4 +1,4 @@
-package weatherreport;
+package services;
 
 // 🔹 Interface unchanged
 public interface IWeatherSensor {

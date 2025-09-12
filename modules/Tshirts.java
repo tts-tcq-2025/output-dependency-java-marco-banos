@@ -1,0 +1,13 @@
+package modules;
+
+public class Tshirts {
+    public static String size(int cms) {
+        if(cms < 38) {
+            return "S";
+        } else if(cms > 38 && cms < 42) {
+            return "M";
+        } else {
+            return "L";
+        }
+    }
+}

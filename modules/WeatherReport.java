@@ -1,4 +1,6 @@
-package weatherreport;
+package modules;
+
+import services.IWeatherSensor;
 
 public class WeatherReport {
     public static String Report(IWeatherSensor sensor) {
@@ -49,31 +51,5 @@ public class WeatherReport {
         System.out.println("TestHighPrecipitation -> " + report);
         // 🆕 Stronger assertion: this will FAIL (currently returns "Sunny Day")
         assert report.contains("rain") : "Expected rain in report but got: " + report;
-    }
-
-    public static void main(String[] args) {
-        TestRainy();
-        TestHighPrecipitation();
-        System.out.println("All is well (maybe!)");
-    }
-}
-
-// 🔹 Default stub
-class SensorStub implements IWeatherSensor {
-    @Override
-    public int Humidity() {
-        return 72; // Stubbed humidity
-    }
-    @Override
-    public int Precipitation() {
-        return 70; // Stubbed precipitation
-    }
-    @Override
-    public double TemperatureInC() {
-        return 26; // Stubbed temperature
-    }
-    @Override
-    public int WindSpeedKMPH() {
-        return 52; // Stubbed wind speed
     }
 }
